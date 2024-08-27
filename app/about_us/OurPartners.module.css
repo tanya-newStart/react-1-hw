@@ -1,0 +1,13 @@
+.logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.imageLogo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
