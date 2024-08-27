@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.valueItem {
+  padding: 20px;
+}
+.valueItem:nth-child(odd) {
+  transform: translateY(10px);
+}
+.valueItem:nth-child(even) {
+  transform: translateY(-10px);
+}
+.valueItem h3 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.valueItem p {
+  line-height: 1.5;
+}
