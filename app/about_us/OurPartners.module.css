@@ -1,13 +1,21 @@
+.partnersHeader {
+  margin-bottom: 40px;
+}
+.partnersHeader p {
+  margin: 40px 0;
+  text-justify: newspaper;
+}
 .logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   align-items: center;
   justify-items: center;
+  padding: 0 10px;
 }
 
 .imageLogo {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 80px;
   object-fit: contain;
 }
