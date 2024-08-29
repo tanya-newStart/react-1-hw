@@ -7,7 +7,7 @@ export const OurValues = () => {
       {ourValuesData.map((value) => (
         <div key={value.id} className={styles.valueItem}>
           <h3>{value.title}</h3>
-          <img src={value.icon} alt={value.title} className={styles.icon} />
+          <img src={value.icon} alt="" className={styles.icon} />
           <p>{value.description}</p>
         </div>
       ))}
