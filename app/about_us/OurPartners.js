@@ -43,9 +43,7 @@ const ourPartnersData = [
 export const OurPartners = () => {
   return (
     <section>
-      <header className={styles.partnersHeader}>
-        <p>{partnersIntro.description}</p>
-      </header>
+      <p className={styles.partnersInfo}>{partnersIntro.description}</p>
       <div className={styles.logos}>
         {ourPartnersData.map((partner, index) => (
           <div key={index}>

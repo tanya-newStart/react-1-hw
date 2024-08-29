@@ -4,9 +4,7 @@ import { ourCrewAbout, ourCrewData } from "./crew.js";
 export const OurCrew = () => {
   return (
     <section className={styles.container}>
-      <header className={styles.crewHeader}>
-        <p>{ourCrewAbout.description}</p>
-      </header>
+      <p className={styles.crewIntro}>{ourCrewAbout.description}</p>
       <div className={styles.crewAbout}>
         {ourCrewData.map((member, index) => (
           <div key={index} className={styles.crewItem}>

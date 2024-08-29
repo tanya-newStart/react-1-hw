@@ -1,8 +1,5 @@
-.partnersHeader {
-  margin-bottom: 40px;
-}
-.partnersHeader p {
-  margin: 40px 0;
+.partnersInfo {
+  margin: 40px 20px;
 }
 .logos {
   display: grid;
