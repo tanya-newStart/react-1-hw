@@ -9,11 +9,11 @@ export const OurCrew = () => {
         {ourCrewData.map((member, index) => (
           <div key={index} className={styles.crewItem}>
             <div className={styles.crewImage}>
-              <img src={member.image} alt={member.name} />
+              <img src={member.image} />
             </div>
             <div className={styles.crewInfo}>
-              <h3>{member.title}</h3>
-              <h2>{member.name}</h2>
+              <h3>{member.name}</h3>
+              <h4>{member.title}</h4>
               <p>{member.description}</p>
             </div>
           </div>
