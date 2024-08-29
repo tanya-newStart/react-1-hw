@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.valueItem {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.valueItem h3 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.valueItem p {
+  padding: 10px;
+  line-height: 1.5;
+}
+.icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  filter: invert(1);
+  width: 48px;
+  height: 48px;
+}

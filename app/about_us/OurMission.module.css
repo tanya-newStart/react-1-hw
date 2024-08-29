@@ -1,0 +1,7 @@
+.container {
+  margin: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  line-height: 1.5;
+}
