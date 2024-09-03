@@ -1,6 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import SocialMediaItem from "./SocialMediaItem";
+import { socialLinks } from "./data";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
@@ -30,26 +33,14 @@ export const Footer = () => {
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
-          <li>
-            <a href="https://linkedin.com">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://facebook.com">Facebook</a>
-          </li>
-          <li>
-            <a href="https://instagram.com">Instagram</a>
-          </li>
-          <li>
-            <a href="https://tiktok.com">Tiktok</a>
-          </li>
-          <li>
-            <a href="https://google.com">On the streets at night</a>
-          </li>
-          {/* TASK - React 1 week 2 */}
-          {/* Create a <SocialMediaItem /> component and replace all of the list items! */}
-          {/* it should accept the following props */}
-          {/* url, title, icon */}
-          {/* For the icons, you can download 1-2 social media icons for testing and put it in the /public/socialmedia/ folder */}
+          {socialLinks.map((link) => (
+            <SocialMediaItem
+              key={link.id}
+              url={link.url}
+              title={link.title}
+              icon={link.icon}
+            ></SocialMediaItem>
+          ))}
         </ul>
       </div>
     </footer>

@@ -23,9 +23,6 @@ export const Navbar = () => {
       <nav className={styles.navbar}>
         <div className={styles.navbarBG} />
         <ul className={styles.navbarList}>
-          {/* TASK - React 1 week 2 */}
-          {/* Create a <NavItem> component, which accepts the following:  */}
-          {/* title, link, isActive  */}
           {navbarItems.map((item, index) => (
             <NavItem
               key={item.id}
