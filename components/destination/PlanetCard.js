@@ -3,7 +3,7 @@ const PlanetCard = ({
   name,
   description,
   thumbnail,
-  isPlanetSelected,
+  isSelected,
   onAddOrRemovePlanet,
 }) => {
   return (
@@ -11,16 +11,16 @@ const PlanetCard = ({
       <img className={styles.planetThumbnail} src={thumbnail} alt="" />
       <div className={styles.planetDescription}>
         <h2>
-          {name} {isPlanetSelected ? "- SELECTED" : ""}
+          {name} {isSelected ? "- SELECTED" : ""}
         </h2>
         <p>{description}</p>
       </div>
       <button
         type="button"
         className="roundButton"
-        onClick={() => onAddOrRemovePlanet({ name }, 0)}
+        onClick={() => onAddOrRemovePlanet(name)}
       >
-        {isPlanetSelected ? "REMOVE" : "ADD PLANET"}
+        {isSelected ? "REMOVE" : "ADD PLANET"}
       </button>
     </div>
   );
