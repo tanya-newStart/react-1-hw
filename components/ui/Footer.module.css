@@ -19,7 +19,9 @@
   padding: var(--spacing-08) 0;
 }
 
-.footer p, .footer a, .footer li {
+.footer p,
+.footer a,
+.footer li {
   color: #000;
   font-size: medium;
   font-weight: 200;
@@ -40,9 +42,33 @@
 }
 
 .footerList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style-type: none;
 }
 
 .footerList li {
+  display: flex;
+  align-items: center;
   padding-block: var(--spacing-04);
+}
+
+.footerList img {
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.pages ul {
+  list-style: none;
+}
+
+.pages li {
+  margin: 10px 0;
+}
+
+.pages a:hover {
+  color: #003580;
 }
