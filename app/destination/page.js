@@ -29,12 +29,28 @@ export const Destinations = () => {
     });
   };
 
+  const handlePlanetAction = (thumbnail, name) => {
+    if (selectedPlanets.some((planet) => planet.name === name)) {
+      removeFromWishlist(name);
+    } else {
+      onAddWishlistItem(thumbnail, name);
+    }
+  };
+
   return (
     <div className="fullBGpicture">
       <main className="mainContent">
         <h1>Travel destinations</h1>
         <section className="card">
           <h2>Wishlist</h2>
+          {!isPlanetSelected ? (
+            <p>No planets in wishlist :(</p>
+          ) : (
+            <p>
+              You have {numberOfPlanets} planet
+              {numberOfPlanets !== 1 ? "s" : ""} in your wishlist
+            </p>
+          )}
           <AddWishlistItem onAddWishlistItem={onAddWishlistItem} />
           <h3>Your current wishlist</h3>
           <div className={styles.wishlistList}>
@@ -50,14 +66,6 @@ export const Destinations = () => {
                 ))}
               </div>
             )}
-            {!isPlanetSelected ? (
-              <p>No planets in wishlist :(</p>
-            ) : (
-              <p>
-                You have {numberOfPlanets} planet
-                {numberOfPlanets !== 1 ? "s" : ""} in your wishlist
-              </p>
-            )}
           </div>
         </section>
         <section className="card">
@@ -70,7 +78,7 @@ export const Destinations = () => {
               thumbnail={planet.thumbnail}
               isSelected={selectedPlanets.some((p) => p.name === planet.name)}
               onAddOrRemovePlanet={() =>
-                onAddWishlistItem(planet.thumbnail, planet.name)
+                handlePlanetAction(planet.thumbnail, planet.name)
               }
             />
           ))}
