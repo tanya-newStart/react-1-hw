@@ -15,6 +15,8 @@ export const NasaCollaboration = () => {
   const [dailyImg, setDailyImg] = useState({});
   const [roverPhoto, setRoverPhoto] = useState({});
 
+  const [readMore, setReadMore] = useState(false);
+
   useEffect(() => {
     const fetchRoverPhotos = async () => {
       const roverPhotoResponse = await fetch(NASA_URLs.marsRoverPhoto).then(
@@ -40,7 +42,7 @@ export const NasaCollaboration = () => {
   const explanation = dailyImg.explanation;
   const attribution = "Portal Universe: Random APOD Generator";
 
-  const mainText = explanation.includes(attribution)
+  const mainText = explanation?.includes(attribution)
     ? explanation.replace(attribution, "")
     : explanation;
 
@@ -56,7 +58,16 @@ export const NasaCollaboration = () => {
             className={styles.nasaPicOfTheDayImg}
             alt=""
           />
-          <p className={styles.imgDescription}>{mainText}</p>
+          <p className={styles.imgDescription}>
+            {readMore ? mainText : `${(mainText || "").substring(0, 300)}...`}
+            <button
+              type="button"
+              className={styles.btnText}
+              onClick={() => setReadMore(!readMore)}
+            >
+              {!readMore ? "Read more" : "Show less"}
+            </button>
+          </p>
           <span className={styles.attribution}>{attribution}</span>
         </section>
         <section className="card">

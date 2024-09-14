@@ -36,3 +36,12 @@
   font-style: italic;
   padding-right: 20px;
 }
+
+.btnText {
+  background: none;
+  border: none;
+  font: inherit;
+  color: rgb(34, 0, 128);
+  cursor: pointer;
+  padding: 0;
+}
